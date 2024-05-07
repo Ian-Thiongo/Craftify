@@ -1,12 +1,15 @@
 
-import React from 'react';
+
+import React, { useState } from 'react';
 import NavFooter from './components/Nav-Footer';
 import Products from "./db.json";
 import "./components/productlisting.css";
+import SearchBar from './SearchBar'
 
 function App() {
   return (
     <>
+
       <div className="product-grid"> {/* Container for grid layout */}
         {Products.map((product) => (
           <div className="product-card" key={product.id}>
@@ -19,6 +22,7 @@ function App() {
           </div>
         ))}
   <NavFooter />
+    <SearchBar/>
       </div>
     </>
 
