@@ -1,21 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+
+import React, { useState } from 'react';
+import NavFooter from './components/Nav-Footer';
+import Products from "./db.json";
+import "./components/productlisting.css";
 import SearchBar from './SearchBar'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     
 
-
-
-     <SearchBar/>
+      <div className="product-grid"> {/* Container for grid layout */}
+        {Products.map((product) => (
+          <div className="product-card" key={product.id}>
+            <h1>{product.name}</h1>
+            <h2>{product.price}</h2>
+            <h3>{product.artist}</h3>
+            <p>{product.description}</p> {/* Use <p> for longer descriptions */}
+            <img src={product.image} alt={product.name} />
+          
+          </div>
+        ))}
+  <NavFooter />
+    <SearchBar/>
+      </div>
     </>
-  )
+
+  );
 }
 
-export default App
+export default App;
+
