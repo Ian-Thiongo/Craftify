@@ -1,3 +1,6 @@
+
+import React from 'react';
+import NavFooter from './components/Nav-Footer';
 import Products from "./db.json";
 import "./components/productlisting.css";
 
@@ -12,10 +15,13 @@ function App() {
             <h3>{product.artist}</h3>
             <p>{product.description}</p> {/* Use <p> for longer descriptions */}
             <img src={product.image} alt={product.name} />
+          
           </div>
         ))}
+  <NavFooter />
       </div>
     </>
+
   );
 }
 
