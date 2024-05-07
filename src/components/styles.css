@@ -1,0 +1,34 @@
+/* styles.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: beige;
+  padding: 10px;
+  z-index: 1000; 
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  margin-left: 27px; 
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #8b5f65;
+}
+
+.nav-item a:hover {
+  color: #c7a9ac; 
+}
+
+  
