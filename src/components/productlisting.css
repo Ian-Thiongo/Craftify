@@ -1,0 +1,30 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    grid-gap: 10px; /* Spacing between cards */
+  }
+  
+  .product-card {
+    margin: 0; /* Remove default margin */
+    padding: 15px;
+    border: 1px solid #ddd; /* Optional border for styling */
+    background-color: #ede0d4; /* Optional background color */
+  }
+  
+  .product-card img {
+    max-width: 400%;
+  max-height: 300px; /* Adjust height as needed */
+  border-radius: 60% 60% 0 0; /* Rounded top corners */
+  box-shadow:
+    0 4px 4px rgba(0, 0, 0, 0.2), /* Inner shadow for field */
+    inset 20px 10px 10px rgba(0, 0, 0, 0.4), /* Shadow for seating */
+    inset 40px 0px 10px rgba(0, 0, 0, 0.6); /* Deeper shadow for seating base */
+}
+
+  
+  .product-card p {
+    /* Adjust font size, line-height, and other styles for descriptions */
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  
