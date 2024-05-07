@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: beige;
+  background-color:  #E6CCB2;
   padding: 10px;
   z-index: 1000; 
 }
@@ -32,6 +32,18 @@
   color: #c7a9ac; 
 }
 
+.navbar {
+  position: absolute; /* This allows negative transform */
+  top: 0; /* Positions it at the top initially */
+  left: 0; /* Aligns it to the left */
+  transition: transform 0.2s ease-in-out; /* Smooth transition */
+  /* Other navbar styles */
+}
+
+.scrolled { /* Additional class for hidden state */
+  transform: translateY(-100%); /* Moves it off-screen (adjust value as needed) */
+}
+
 /* styling the footer */
 
 .footer {
@@ -39,7 +51,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: beige; 
+  background-color:  #E6CCB2; 
   padding: 10px 0; 
   text-align: center;
 }
