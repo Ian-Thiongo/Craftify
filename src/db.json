@@ -1,0 +1,169 @@
+ [
+       {
+       "id": 1,
+       "image" : "https://i.pinimg.com/236x/17/fb/03/17fb03076528a248004a1eb13722219d.jpg",
+        "name" :  "The City of Sicily",
+        "artist" : "by Le Clerkk",
+        "description" : "Scorching sun beats down on a sapphire sea.White houses cling to a mountain's side, dwarfed by the snow-capped peak above. A solitary boat floats, a splash of color against the vast blue.",
+        "price" : "$300",
+        "category":"Art "
+       },
+    {
+       "id": 2,
+       "image" : "https://i.pinimg.com/236x/de/68/09/de680957576efda90aca441c6f467bc3.jpg",
+        "name" :  "A Delicate Dance",
+        "artist" : " by Claude Monet",
+        "description" : " This painting showcases a Monarch butterfly in stunning detail.",
+        "price" : "$200",
+        "category": "Art"
+       },
+    
+    {
+       "id": 3,
+       "image" : "https://i.pinimg.com/564x/99/86/39/9986392a5868e26e995185d4f71f5ab6.jpg",
+        "name" :  "Leopard",
+        "artist" : "by Eugène Delacroix",
+        "description" : "Spotted hunter stalks silent in golden light.",
+        "price" : "$100",
+        "category":"Art"
+       },
+    
+    {
+       "id": 4,
+       "image" : "https://i.pinimg.com/564x/3b/34/99/3b34995016059464f8683c40b6fa95f1.jpg",
+        "name" :  "Sunset boat ride",
+        "artist" : "by Caravaggio",
+        "description" : "Warm breeze whispers past, rocking boat on a sea of burning gold.",
+        "price" : "$400",
+        "category":"Art"
+       },
+    
+    {
+       "id": 5,
+       "image" : "https://i.pinimg.com/736x/2a/a8/b8/2aa8b81e13678bdee0afb58347b4309c.jpg",
+        "name" :  "Rome",
+        "artist" : "by Donatello",
+        "description" : " painting captures the grandeur of Rome.Sunlight bathes ancient buildings in a warm glow,",
+        "price" : "$300",
+        "category":"Art "
+       },
+    
+    {
+       "id": 6,
+       "image" : "https://i.pinimg.com/564x/01/ff/7a/01ff7af8067069bd9fa52eb8ee48d199.jpg",
+        "name" :  "Countryside",
+        "artist" : "by Giorgione",
+        "description" : "A winding dirt road,dusty and sun-dappled, cuts through a lush green landscape.Towering trees flank either side",
+        "price" : "$300",
+        "category":"Art"
+       },
+    
+    {
+       "id": 7,
+       "image" : "https://i.pinimg.com/236x/75/41/3c/75413c01a5f50f7c42b1e03dbd3ef4fe.jpg",
+        "name" :  "Vase",
+        "artist" : "by Grayson Perry",
+        "description":"This sleek vase crafted from smooth porcelain adds a touch of mordern sophistication to any home ",
+        "price" : "$100",
+        "category": "Pottery"
+       },
+    
+    {
+       "id": 8,
+       "image" : "https://i.pinimg.com/236x/7c/0e/c7/7c0ec7883beed47e91c5781d8ef0ce90.jpg",
+        "name" :  "Vase",
+        "artist" : "by Lucie Rie",
+        "description" : "This sleek vase crafted from smooth porcelain adds a touch of mordern sophistication to any home ",
+        "price" : "$100",
+        "category":"Pottery"
+       },
+    
+    {
+       "id": 9,
+       "image" : "https://i.pinimg.com/564x/ef/73/74/ef7374d35e644311726567e2093a542a.jpg",
+        "name" :  "Vase",
+        "artist" : " by Otto Natzler",
+        "description" : "Make a bold statement in any room with this vase. Fill it with vibrant flowers or display it empty as a sculptural piece of art.",
+        "price" : "$100",
+        "category":"Pottery"
+       },
+    
+    {
+       "id": 10,
+       "image" : "https://i.pinimg.com/236x/10/8d/78/108d78591ef011c1b8f3d369b2c4aba0.jpg",
+        "name" :  "Pot",
+        "artist" : "by Mary Roe",
+        "description" : "Its clean lines and minimalist design will beautifully complement your existing décor, while its hue creates a calming and elegant atmosphere.",
+        "price" : "$200",
+        "category":"Pottery"
+       },
+    
+    {
+       "id": 11,
+       "image" : "https://i.pinimg.com/236x/71/c0/a2/71c0a26c510d7f85c49030db904f0140.jpg",
+        "name" :  "Hand-painted bowls",
+        "artist" : "by Lana Bel May",
+        "description":"Unleash a burst of color and artistry into your home with this hand painted bowls",
+        "price" : "$200",
+        "category":"Pottery"
+       },
+    
+    {
+       "id": 12,
+       "image" : "https://i.pinimg.com/564x/cf/ae/5f/cfae5f7dc4d89079fa14144e1965c9aa.jpg",
+        "name" :  "Holder",
+        "artist" : "by Gertrud  Salazar",
+        "description" : " holder keeps them organized and readily available, adding a touch of rustic elegance.",
+        "price" : "100",
+        "category" : "Wood work"
+       },
+    
+    {
+       "id": 13,
+       "image" : "https://i.pinimg.com/236x/57/35/a9/5735a99392f5a83ce6669ead4cb4006e.jpg",
+        "name" :  "Mould",
+        "artist" : " by Lucie Rie" ,
+        "price" : "$50",
+        "category" : "Wood work"
+       },
+    
+    {
+       "id": 14,
+       "image" : "https://i.pinimg.com/564x/dc/36/df/dc36df0e5560b471f4c1f4e3f114dbd0.jpg",
+        "name" :  "Wall Hanging",
+        "artist" : " by Lily Van Der",
+        "description" : "These geometric patterns are meticulously crafted, adding depth and texture to your space.",
+        "price" : "$100",
+        "category" : "Wood work"
+       },
+    
+    {
+       "id": 15,
+       "image" : "https://i.pinimg.com/564x/63/0d/09/630d090003230d143e3d2dbb1f290ecb.jpg",
+        "name" :  "Rope Art",
+        "artist" : "by Sandro Botticelli",
+        "description" : "The beauty of this rope art lies in its simplicity and versatility.",
+        "price" : "400",
+        "category" : "Wood work"
+       },
+    
+    {
+       "id": 16,
+       "image" : "https://i.pinimg.com/236x/71/6b/f1/716bf1e62466b3ebf6be41836df06eba.jpg",
+        "name" :  "Wood art",
+        "artist" : "by Henri Matisse",
+        "description" : "Hang it in your living room for a touch of boho charm, your bedroom for a serene ambiance, or even your entryway for a warm welcome.",
+        "price" : "$300",
+        "category" : "Wood work"
+       },
+    
+    {
+       "id": 17,
+       "image" : "https://i.pinimg.com/564x/e9/02/46/e902465255fdaf4e0f642831a5898a1b.jpg",
+        "name" :  "Fish Art",
+        "artist" : "by Minne Minnema",
+        "description" : "The fish art will spark curiosity and invite guests to admire the artistry",
+        "price" : "$200",
+        "category" : "Wood work"
+       }
+      ]
