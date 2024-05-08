@@ -1,10 +1,11 @@
+
 import React, { useState } from 'react';
 import NavFooter from './components/Nav-Footer';
 import Products from "./db.json";
 import "./components/productlisting.css";
 import SearchBar from './SearchBar'
 import "./components/BuyButton.css"
-
+import Logo from './components/Logo'
 
 function App() {
   
@@ -35,7 +36,8 @@ function App() {
 
     <>
       <NavFooter />
-    <SearchBar/> 
+      <SearchBar/> 
+      <Logo/>
       <div className="product-grid"> {/* Container for grid layout */}
         {Products.map((product) => (
           <div className="product-card" key={product.id}>
@@ -48,7 +50,6 @@ function App() {
 
           </div>
         ))}
- 
       </div>
       <div className="basket">
         <h2>Basket</h2>
@@ -63,9 +64,9 @@ function App() {
         ))}
       </div>
     </>
-
   );
 }
 
 export default App;
+
 
