@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Four equal columns */
     grid-gap: 10px; /* Spacing between cards */
+    padding-bottom: 100px;
   }
   
   .product-card {
