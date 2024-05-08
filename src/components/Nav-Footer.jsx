@@ -1,4 +1,4 @@
-// Nav-Footer.js
+
 
 import React from 'react';
 import './styles.css';
@@ -26,4 +26,5 @@ function NavFooter(){
 }
 
 export default NavFooter;
+
 

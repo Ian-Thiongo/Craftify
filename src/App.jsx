@@ -1,16 +1,17 @@
 
-
-import React, { useState } from 'react';
+import React from 'react';
 import NavFooter from './components/Nav-Footer';
 import Products from "./db.json";
 import "./components/productlisting.css";
-import SearchBar from './SearchBar'
+import SearchBar from './SearchBar';
+import Logo from './components/Logo';
 
 function App() {
   return (
     <>
       <NavFooter />
-    <SearchBar/> 
+      <SearchBar/> 
+      <Logo/>
       <div className="product-grid"> {/* Container for grid layout */}
         {Products.map((product) => (
           <div className="product-card" key={product.id}>
@@ -19,15 +20,13 @@ function App() {
             <h3>{product.artist}</h3>
             <p>{product.description}</p> {/* Use <p> for longer descriptions */}
             <img src={product.image} alt={product.name} />
-          
           </div>
         ))}
- 
       </div>
     </>
-
   );
 }
 
 export default App;
+
 
