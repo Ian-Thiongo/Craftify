@@ -9,7 +9,8 @@ import SearchBar from './SearchBar'
 function App() {
   return (
     <>
-
+      <NavFooter />
+    <SearchBar/> 
       <div className="product-grid"> {/* Container for grid layout */}
         {Products.map((product) => (
           <div className="product-card" key={product.id}>
@@ -21,8 +22,7 @@ function App() {
           
           </div>
         ))}
-  <NavFooter />
-    <SearchBar/>
+ 
       </div>
     </>
 
