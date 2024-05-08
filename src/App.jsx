@@ -2,14 +2,30 @@
 
 import React, { useState } from 'react';
 import NavFooter from './components/Nav-Footer';
+import SearchBar from './SearchBar'
 import Products from "./db.json";
 import "./components/productlisting.css";
-import SearchBar from './SearchBar'
+
 
 function App() {
+
+  const [filteredProducts, setFilteredProducts] = useState(Products);
+
+  
+  const handleSearch = (query) => {
+    const filtered = Products.filter(product => {
+      return (
+        product.name.toLowerCase().includes(query.toLowerCase()) ||
+        product.artist.toLowerCase().includes(query.toLowerCase()) ||
+        product.description.toLowerCase().includes(query.toLowerCase())
+      );
+    });
+    setFilteredProducts(filtered);
+  };
   return (
     <>
-
+       <NavFooter />
+    <SearchBar onSearch={handleSearch}/>
       <div className="product-grid"> {/* Container for grid layout */}
         {Products.map((product) => (
           <div className="product-card" key={product.id}>
@@ -21,9 +37,9 @@ function App() {
           
           </div>
         ))}
-  <NavFooter />
-    <SearchBar/>
+  
       </div>
+      
     </>
 
   );

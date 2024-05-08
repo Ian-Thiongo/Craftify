@@ -9,9 +9,9 @@ function SearchBar({ onSearch }) {
     setQuery(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  function handleSubmit (event){
     event.preventDefault();
-    onSearch(query);
+    onSearch(query.trim()); 
   };
 
   return (

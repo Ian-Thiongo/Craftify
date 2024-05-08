@@ -7,11 +7,12 @@
   }
   
   .search-input {
-    width: 80%;
+    width: 100%;
     padding: 15px 20px;
     border-radius: 20px;
-    border: none;
-    outline: none;
+    border-bottom: 2px;
+    
+    border: grey;
   }
   
   .search-button {
