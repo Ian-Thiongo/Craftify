@@ -1,0 +1,38 @@
+.buy-button{
+    background-color: rgb(201, 91, 133);
+    color: white;
+    padding: 2px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.buy-button:hover {
+    background-color: green;
+}
+.increase-button{
+    color: black;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+.increase-button:hover{
+    background-color: green;
+}
+.decrease-button{
+    color: black;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+.decrease-button:hover{
+    background-color: red;
+}
+.remove-button{
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+}
+.remove-button:hover{
+    background-color: darkred;
+}
