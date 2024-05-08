@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import NavFooter from './components/Nav-Footer';
 import Products from "./db.json";

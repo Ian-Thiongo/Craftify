@@ -29,7 +29,7 @@
 }
 
 .nav-item a:hover {
-  color: #c7a9ac; 
+  color: #1a1919; 
 }
 
 .navbar {
@@ -45,30 +45,34 @@
 }
 
 /* styling the footer */
-
 .footer {
   position: fixed;
-  bottom: 0;
+  bottom: -60px; 
   left: 0;
   width: 100%;
-  background-color:  #E6CCB2; 
-  padding: 10px 0; 
+  background-color: #E6CCB2;
+  padding: 10px 0;
   text-align: center;
+  transition: bottom 0.3s ease; 
+ 
 }
 
 .footer-content {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .footer a {
   text-decoration: none;
-  color:#8b5f65; 
-  margin: 0 30px; 
+  color: #8b5f65;
+  margin: 0 30px;
 }
 
 .footer a:hover {
-  color: #c7a9ac; 
+  color: #0c0c0c;
 }
 
+.visible {
+  bottom: 0; /* Show the footer when visible */
+}
