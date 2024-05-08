@@ -5,9 +5,13 @@ import './SearchBar.css';
 function SearchBar({ onSearch }) {
   const [query, setQuery] = useState('');
 
+
   const handleChange = (event) => {
     setQuery(event.target.value);
+    onSearch(event.target.value.trim()); // Trigger search on every character change
   };
+
+  
 
   function handleSubmit (event){
     event.preventDefault();
@@ -15,14 +19,15 @@ function SearchBar({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="search-container">
+    <form className="search-container">
       <input
         type="text"
+        className="search-input"
         placeholder="Search..."
         value={query}
         onChange={handleChange}
       />
-      <button type="submit" className="search-button">Search</button>
+      
     </form>
   );
 }

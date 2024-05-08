@@ -17,7 +17,8 @@ function App() {
       return (
         product.name.toLowerCase().includes(query.toLowerCase()) ||
         product.artist.toLowerCase().includes(query.toLowerCase()) ||
-        product.description.toLowerCase().includes(query.toLowerCase())
+        product.description.toLowerCase().includes(query.toLowerCase())||
+        product.category.toLowerCase().includes(query.toLowerCase())
       );
     });
     setFilteredProducts(filtered);
@@ -37,6 +38,8 @@ function App() {
           
           </div>
         ))}
+        : (
+          <p>No products found for your search.</p> 
   
       </div>
       
