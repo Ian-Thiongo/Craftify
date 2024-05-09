@@ -6,8 +6,14 @@ import "./components/productlisting.css";
 import SearchBar from './SearchBar'
 import "./components/BuyButton.css"
 import Logo from './components/Logo'
+import SellersForm from "./components/SellersForm"
+
 
 function App() {
+
+  const [products, setProducts] = useState(Products); // State for fetched and user-added products
+  
+
   
   const [cart, setCart] = useState([]);
    const addToCart = (product) => {
@@ -30,7 +36,12 @@ function App() {
     });
     setCart(updatedCart);
   };
-  
+
+ 
+ const handleAddProduct = (newProduct) => {
+  setProducts([...products,newProduct]);
+};
+
 
   return (
 
@@ -38,19 +49,24 @@ function App() {
       <NavFooter />
       <SearchBar/> 
       <Logo/>
+      
       <div className="product-grid"> {/* Container for grid layout */}
-        {Products.map((product) => (
+        {products.map((product) => (
           <div className="product-card" key={product.id}>
             <h1>{product.name}</h1>
             <h2>{product.price}</h2>
             <h3>{product.artist}</h3>
-            <p>{product.description}</p> {/* Use <p> for longer descriptions */}
+            <h3>{product.description}</h3> 
             <img src={product.image} alt={product.name} />
             <button className='buy-button' onClick={() => addToCart(product)}>Buy</button>
 
           </div>
         ))}
       </div>
+      
+      <SellersForm onAddProduct={handleAddProduct} /> 
+
+
       <div className="basket">
         <h2>Basket</h2>
         {cart.map((item, index) => (
@@ -63,6 +79,7 @@ function App() {
           </div>
         ))}
       </div>
+      
     </>
   );
 }
