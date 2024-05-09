@@ -7,18 +7,18 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-.buy-button:hover {
-    background-color: green;
-}
+
 .increase-button{
     color: black;
     padding: 5px;
     margin: 5px;
     cursor: pointer;
 }
+
 .increase-button:hover{
     background-color: green;
 }
+
 .decrease-button{
     color: black;
     padding: 5px;
