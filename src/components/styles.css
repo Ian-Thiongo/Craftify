@@ -1,13 +1,13 @@
 /* styling the navbar*/
-
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color:  #E6CCB2;
+  background-color: #E6CCB2;
   padding: 10px;
-  z-index: 1000; 
+  z-index: 1000;
+  transition: transform 0.2s ease-in-out; /* Adding transition effect */
 }
 
 .nav-list {
@@ -16,11 +16,10 @@
   margin: 0;
   display: flex;
   justify-content: flex-end;
-
 }
 
 .nav-item {
-  margin-left: 27px; 
+  margin-left: 27px;
 }
 
 .nav-item a {
@@ -29,46 +28,40 @@
 }
 
 .nav-item a:hover {
-  color: #c7a9ac; 
+  color: #c7a9ac;
 }
 
-.navbar {
-  position: absolute; /* This allows negative transform */
-  top: 0; /* Positions it at the top initially */
-  left: 0; /* Aligns it to the left */
-  transition: transform 0.2s ease-in-out; /* Smooth transition */
-  /* Other navbar styles */
+.scrolled {
+  transform: translateY(-100%);
 }
 
-.scrolled { /* Additional class for hidden state */
-  transform: translateY(-100%); /* Moves it off-screen (adjust value as needed) */
-}
-
-/* styling the footer */
+/* Styling the footer */
 
 .footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color:  #E6CCB2; 
-  padding: 10px 0; 
+  background-color: #E6CCB2;
+  padding: 10px 0;
   text-align: center;
 }
 
 .footer-content {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .footer a {
   text-decoration: none;
-  color:#8b5f65; 
-  margin: 0 30px; 
+  color: #8b5f65;
+  margin: 0 30px;
 }
 
 .footer a:hover {
-  color: #c7a9ac; 
+  color: #c7a9ac;
 }
+
+
 

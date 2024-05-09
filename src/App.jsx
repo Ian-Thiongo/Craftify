@@ -1,10 +1,27 @@
 
-import React from 'react';
+import React,{ useState } from 'react';
 import NavFooter from './components/Nav-Footer';
 import Products from "./db.json";
 import "./components/productlisting.css";
+import Form from './components/Form'
+
 
 function App() {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [showLoginForm, setShowLoginForm] = useState(false);
+
+  const handleLogin = () => {
+    setLoggedIn(true);
+    setShowLoginForm(false); // Close the login form after successful login
+  };
+
+  const handleLoginLinkClick = () => {
+    console.log("Login link clicked")
+    setShowLoginForm(true);
+    console.log("showLoginForm:", showLoginForm);
+  };
+
   return (
     <>
       <div className="product-grid"> {/* Container for grid layout */}
@@ -18,12 +35,24 @@ function App() {
           
           </div>
         ))}
-  <NavFooter />
+
+           
+      {showLoginForm && <Form onLogin={handleLogin} />}
+
+  <NavFooter
+  onLoginClick={handleLoginLinkClick} 
+  loggedIn={loggedIn}  />
+       
       </div>
+      
     </>
 
   );
 }
 
 export default App;
+
+
+
+
 
