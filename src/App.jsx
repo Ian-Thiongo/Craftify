@@ -5,10 +5,23 @@ import Products from "./db.json";
 import "./components/productlisting.css";
 import SearchBar from './SearchBar'
 import "./components/BuyButton.css"
-import Logo from './components/Logo' 
+import Logo from './components/Logo'
 
 function App() {
-  
+  const [query,setQuery] = useState('');
+  const [filteredProducts, setFilteredProducts] = useState(Products);
+  const handleSearch = (query) => {
+    const filteredProducts = Products.filter((product) => {
+      const lowerQuery = query.toLowerCase();
+      return (
+        product.name.toLowerCase().includes(lowerQuery) ||
+        product.artist.toLowerCase().includes(lowerQuery) ||
+        product.category.toLowerCase().includes(lowerQuery)
+      );
+    });
+    setFilteredProducts(filteredProducts);
+  };
+
   const [cart, setCart] = useState([]);
    const addToCart = (product) => {
     const existingItemIndex = cart.findIndex(item => item.id === product.id);
@@ -20,20 +33,6 @@ function App() {
       setCart([...cart, {...product, quantity: 1 }]);
     }
   };
-  const removeFromCart = (productId) => {
-    const updatedCart = cart.filter(item => item.id !== productId);
-    setCart(updatedCart);
-  };
-
-  const increaseQuantity = (productId) => {
-    const updatedCart = cart.map(item => {
-      if (item.id === productId) {
-        return { ...item, quantity: item.quantity + 1 };
-      }
-      return item;
-    });
-    setCart(updatedCart);
-  };
 
   const decreaseQuantity = (productId) => {
     const updatedCart = cart.map(item => {
@@ -44,42 +43,46 @@ function App() {
     });
     setCart(updatedCart);
   };
+
   
+
   return (
 
-    <>
-      <NavFooter />
-      <SearchBar/> 
-      <Logo/>
-      <div className="product-grid"> {/* Container for grid layout */}
-        {Products.map((product) => (
-          <div className="product-card" key={product.id}>
-            <h1>{product.name}</h1>
-            <h2>{product.price}</h2>
-            <h3>{product.artist}</h3>
-            <p>{product.description}</p> {/* Use <p> for longer descriptions */}
-            <img src={product.image} alt={product.name} />
-            <button className='buy-button' onClick={() => addToCart(product)}>Add to Cart</button>
-
-          </div>
-        ))}
+<>
+  <NavFooter />
+  <SearchBar onSearch={handleSearch}/> 
+  <Logo/>
+  <div className="product-grid"> {/* Container for grid layout */}
+  {filteredProducts.length > 0 ? (
+      filteredProducts.map((product) => (
+      <div className="product-card" key={product.id}>
+        <h1>{product.name}</h1>
+        <h2>{product.price}</h2>
+        <h3>{product.artist}</h3>
+        <p>{product.description}</p> 
+        <img src={product.image} alt={product.name} />
+        <button className='buy-button' onClick={() => addToCart(product)}>Buy</button>
+       
       </div>
-      <div className="basket">
-        <h2>Cart</h2>
-        {cart.map((item, index) => (
-          <div key={index}>
-            <p>{item.name} - ${item.price} - Quantity: {item.quantity}</p>
-            <button className='increase-button' onClick={() => increaseQuantity(item.id)}>+1</button>
-            <button className='decrease-button' onClick={() => decreaseQuantity(item.id)}>-1</button>
-            <button className='remove-button' onClick={() => removeFromCart(item.id)}>Remove</button>
+      ))
+    ):(<p></p>)}
+    
+  </div>
+  <div className="basket">
+    <h2>Basket</h2>
+    {cart.map((item, index) => (
+      <div key={index}>
+        <p>{item.name} - ${item.price} - Quantity: {item.quantity}</p>
+        <button className='increase-button' onClick={() => increaseQuantity(item.id)}>+1</button>
+        <button className='decrease-button' onClick={() => decreaseQuantity(item.id)}>-1</button>
+        <button className='remove-button' onClick={() => removeFromCart(item.id)}>Remove</button>
 
-          </div>
-        ))}
       </div>
-    </>
+    ))}
+  </div>
+  
+</>
   );
 }
 
 export default App;
-
-
