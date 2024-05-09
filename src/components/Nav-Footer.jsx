@@ -1,10 +1,30 @@
-// Nav-Footer.js
 
-import React from 'react';
-import { Link } from 'react-router-dom'; 
+import React, { useState, useEffect } from 'react';
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 function NavFooter({ loggedIn, onLoginClick }) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+      const documentHeight = document.body.offsetHeight;
+
+      // Calculate whether the user has scrolled to the bottom
+      if (windowHeight + scrollPosition >= documentHeight) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div>
       <nav className="navbar">
@@ -17,21 +37,17 @@ function NavFooter({ loggedIn, onLoginClick }) {
             
               <li className="nav-item">
                 <Link to="/login" >Log In</Link>
-              </li>
-            
+              </li>   
           )}
         </ul>
       </nav>
     
       <footer className="footer">
-        <div className="footer-content">
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
-        </div>
-      </footer>
-    </div>
-  );
-}
+          <li className="nav-item"><a href="#">Log In</a></li>
+        </ul>
+      </nav>
+      <footer className={`footer ${isVisible ? 'visible' : ''}`}>
+
 
 export default NavFooter;
 

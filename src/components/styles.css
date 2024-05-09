@@ -28,23 +28,25 @@
 }
 
 .nav-item a:hover {
+
   color: #c7a9ac;
 }
 
-.scrolled {
-  transform: translateY(-100%);
-}
 
-/* Styling the footer */
+.scrolled { 
+  transform: translateY(-100%); 
+}
 
 .footer {
   position: fixed;
-  bottom: 0;
+  bottom: -60px; 
   left: 0;
   width: 100%;
   background-color: #E6CCB2;
   padding: 10px 0;
   text-align: center;
+  transition: bottom 0.3s ease; 
+ 
 }
 
 .footer-content {
@@ -111,4 +113,12 @@ button[type="submit"] {
 
 
 
+
+=======
+  color: #0c0c0c;
+}
+
+.visible {
+  bottom: 0; /* Show the footer when visible */
+}
 
