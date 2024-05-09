@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import NavFooter from './components/Nav-Footer';
 import Products from "./db.json";
@@ -5,9 +6,12 @@ import "./components/productlisting.css";
 import SearchBar from './SearchBar'
 import "./components/BuyButton.css"
 import Logo from './components/Logo'
+import SellersForm from "./components/SellersForm"
 import Form from './components/Form'
 
 function App() {
+
+  const [products, setProducts] = useState(Products); // State for fetched and user-added products
   const [query,setQuery] = useState('');
   const [filteredProducts, setFilteredProducts] = useState(Products);
   const handleSearch = (query) => {
@@ -21,6 +25,7 @@ function App() {
     });
     setFilteredProducts(filteredProducts);
   };
+
 
   const [cart, setCart] = useState([]);
    const addToCart = (product) => {
@@ -43,6 +48,13 @@ function App() {
     });
     setCart(updatedCart);
   };
+
+
+ 
+ const handleAddProduct = (newProduct) => {
+  setProducts([...products,newProduct]);
+};
+
   
   
     const [loggedIn, setLoggedIn] = useState(false);
@@ -59,6 +71,8 @@ function App() {
     console.log("showLoginForm:", showLoginForm);
   };
 
+    
+
   const onLogin = (username) => {
     console.log(`Logging in as ${username}`);
   };
@@ -66,7 +80,8 @@ function App() {
 
   return (
 
-<>
+
+<div>
   <NavFooter />
   <SearchBar onSearch={handleSearch}/> 
   <Logo/>
@@ -80,12 +95,18 @@ function App() {
         <p>{product.description}</p> 
         <img src={product.image} alt={product.name} />
         <button className='buy-button' onClick={() => addToCart(product)}>Buy</button>
+     
        
       </div>
-      ))
+    ))
     ):(<p></p>)}
     
-  </div>
+
+      
+      <SellersForm onAddProduct={handleAddProduct} /> 
+
+
+     
        
       {showLoginForm && <Form onLogin={handleLogin} />}
 
@@ -103,12 +124,19 @@ function App() {
         <button className='decrease-button' onClick={() => decreaseQuantity(item.id)}>-1</button>
         <button className='remove-button' onClick={() => removeFromCart(item.id)}>Remove</button>
 
+
       </div>
+
+      
+    
+
     ))}
   </div>
   
-</>
-  );
-}
+   </div>
+   
+
+  
+
 
 export default App

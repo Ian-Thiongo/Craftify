@@ -1,0 +1,48 @@
+ .product-form {
+    display: flex; /* Make the form elements horizontal */
+    flex-direction: row;
+    justify-content: space-between; /* Distribute elements evenly */
+    align-items: center; /* Align labels and inputs vertically */
+    width: 100%; /* Make the form take up the full width */
+    border: 2px solid #B08968; /* Add border with desired width and color */
+    padding: 1rem; /* Add some padding inside the border */
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  .product-form label {
+    display: block; /* Make labels on separate lines */
+    margin-bottom: 5px; /* Add some space between labels and inputs */
+    font-weight: bold; /* Make labels stand out */
+  }
+  
+  .product-form input,
+  .product-form textarea {
+    width: 45%; /* Set width for each input field (adjust as needed) */
+    padding: 5px;
+    border: 1px solid #B08968; /* Add border to input fields */
+    border-radius: 3px; /* Add rounded corners to input fields */
+  }
+  
+  .product-form textarea {
+    height: 100px; /* Set height for the textarea */
+  }
+  
+  .product-form button {
+    background-color: #9C6644; /* Green color for the button */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Add rounded corners to the button */
+    cursor:pointer; /* Indicate clickable behavior */
+  }
+
+  h1 {
+  color: #7F5539;
+  }
+  h2 {
+    color: #9C6644;
+    }
+    h3 {
+        color: #9C6644;
+        }
+  
