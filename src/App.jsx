@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import NavFooter from './components/Nav-Footer';
 import Products from "./db.json";
@@ -6,6 +5,7 @@ import "./components/productlisting.css";
 import SearchBar from './SearchBar'
 import "./components/BuyButton.css"
 import Logo from './components/Logo'
+import Form from './components/Form'
 
 function App() {
   const [query,setQuery] = useState('');
@@ -43,7 +43,25 @@ function App() {
     });
     setCart(updatedCart);
   };
+  
+  
+    const [loggedIn, setLoggedIn] = useState(false);
+  const [showLoginForm, setShowLoginForm] = useState(false);
 
+  const handleLogin = (username) => {
+    setLoggedIn(true);
+    setShowLoginForm(false); // Close the login form after successful login
+  };
+
+  const handleLoginLinkClick = () => {
+    console.log("Login link clicked")
+    setShowLoginForm(true);
+    console.log("showLoginForm:", showLoginForm);
+  };
+
+  const onLogin = (username) => {
+    console.log(`Logging in as ${username}`);
+  };
   
 
   return (
@@ -68,6 +86,14 @@ function App() {
     ):(<p></p>)}
     
   </div>
+       
+      {showLoginForm && <Form onLogin={handleLogin} />}
+
+  <NavFooter
+  onLoginClick={handleLoginLinkClick} 
+  loggedIn={loggedIn}  />
+       
+       
   <div className="basket">
     <h2>Basket</h2>
     {cart.map((item, index) => (
@@ -85,4 +111,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

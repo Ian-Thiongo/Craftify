@@ -1,13 +1,13 @@
 /* styling the navbar*/
-
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color:  #E6CCB2;
+  background-color: #E6CCB2;
   padding: 10px;
-  z-index: 1000; 
+  z-index: 1000;
+  transition: transform 0.2s ease-in-out; /* Adding transition effect */
 }
 
 .nav-list {
@@ -16,11 +16,10 @@
   margin: 0;
   display: flex;
   justify-content: flex-end;
-
 }
 
 .nav-item {
-  margin-left: 27px; 
+  margin-left: 27px;
 }
 
 .nav-item a {
@@ -29,22 +28,15 @@
 }
 
 .nav-item a:hover {
-  color: #1a1919; 
+
+  color: #c7a9ac;
 }
 
-.navbar {
-  position: absolute; /* This allows negative transform */
-  top: 0; /* Positions it at the top initially */
-  left: 0; /* Aligns it to the left */
-  transition: transform 0.2s ease-in-out; /* Smooth transition */
-  /* Other navbar styles */
+
+.scrolled { 
+  transform: translateY(-100%); 
 }
 
-.scrolled { /* Additional class for hidden state */
-  transform: translateY(-100%); /* Moves it off-screen (adjust value as needed) */
-}
-
-/* styling the footer */
 .footer {
   position: fixed;
   bottom: -60px; 
@@ -70,9 +62,63 @@
 }
 
 .footer a:hover {
+  color: #c7a9ac;
+}
+
+/* styling the login page */
+
+
+
+ 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+ 
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background */
+}
+
+
+/* Centering the form */
+.form-container {
+  width: 80%;
+  max-width: 600px;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #DDB892; /* You can adjust the color as needed */
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 20px); /* Adjusted width to account for padding */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: lightbrown; /* You can adjust the color as needed */
+}
+
+button[type="submit"] {
+  width: calc(100% - 20px); /* Adjusted width to account for padding */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7F5539;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+
+=======
   color: #0c0c0c;
 }
 
 .visible {
   bottom: 0; /* Show the footer when visible */
 }
+
