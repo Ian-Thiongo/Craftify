@@ -5,7 +5,7 @@ import Products from "./db.json";
 import "./components/productlisting.css";
 import SearchBar from './SearchBar'
 import "./components/BuyButton.css"
-import Logo from './components/Logo'
+import Logo from './components/Logo' 
 
 function App() {
   
@@ -20,6 +20,20 @@ function App() {
       setCart([...cart, {...product, quantity: 1 }]);
     }
   };
+  const removeFromCart = (productId) => {
+    const updatedCart = cart.filter(item => item.id !== productId);
+    setCart(updatedCart);
+  };
+
+  const increaseQuantity = (productId) => {
+    const updatedCart = cart.map(item => {
+      if (item.id === productId) {
+        return { ...item, quantity: item.quantity + 1 };
+      }
+      return item;
+    });
+    setCart(updatedCart);
+  };
 
   const decreaseQuantity = (productId) => {
     const updatedCart = cart.map(item => {
@@ -31,7 +45,6 @@ function App() {
     setCart(updatedCart);
   };
   
-
   return (
 
     <>
@@ -46,13 +59,13 @@ function App() {
             <h3>{product.artist}</h3>
             <p>{product.description}</p> {/* Use <p> for longer descriptions */}
             <img src={product.image} alt={product.name} />
-            <button className='buy-button' onClick={() => addToCart(product)}>Buy</button>
+            <button className='buy-button' onClick={() => addToCart(product)}>Add to Cart</button>
 
           </div>
         ))}
       </div>
       <div className="basket">
-        <h2>Basket</h2>
+        <h2>Cart</h2>
         {cart.map((item, index) => (
           <div key={index}>
             <p>{item.name} - ${item.price} - Quantity: {item.quantity}</p>
