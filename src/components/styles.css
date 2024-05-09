@@ -63,5 +63,52 @@
   color: #c7a9ac;
 }
 
+/* styling the login page */
+
+
+
+ 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+ 
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background */
+}
+
+
+/* Centering the form */
+.form-container {
+  width: 80%;
+  max-width: 600px;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #DDB892; /* You can adjust the color as needed */
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 20px); /* Adjusted width to account for padding */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: lightbrown; /* You can adjust the color as needed */
+}
+
+button[type="submit"] {
+  width: calc(100% - 20px); /* Adjusted width to account for padding */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7F5539;
+  color: #fff;
+  cursor: pointer;
+}
+
+
 
 

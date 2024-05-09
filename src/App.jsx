@@ -1,17 +1,15 @@
-
 import React,{ useState } from 'react';
 import NavFooter from './components/Nav-Footer';
 import Products from "./db.json";
 import "./components/productlisting.css";
 import Form from './components/Form'
 
-
 function App() {
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
 
-  const handleLogin = () => {
+  const handleLogin = (username) => {
     setLoggedIn(true);
     setShowLoginForm(false); // Close the login form after successful login
   };
@@ -20,6 +18,10 @@ function App() {
     console.log("Login link clicked")
     setShowLoginForm(true);
     console.log("showLoginForm:", showLoginForm);
+  };
+
+  const onLogin = (username) => {
+    console.log(`Logging in as ${username}`);
   };
 
   return (
@@ -36,7 +38,6 @@ function App() {
           </div>
         ))}
 
-           
       {showLoginForm && <Form onLogin={handleLogin} />}
 
   <NavFooter
@@ -44,9 +45,7 @@ function App() {
   loggedIn={loggedIn}  />
        
       </div>
-      
     </>
-
   );
 }
 
