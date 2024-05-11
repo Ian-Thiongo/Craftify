@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
@@ -24,7 +25,6 @@ function NavFooter({ loggedIn, onLoginClick }) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   return (
     <div>
       <nav className="navbar">
@@ -34,20 +34,21 @@ function NavFooter({ loggedIn, onLoginClick }) {
           <li className="nav-item"><a href="#">Contact Us</a></li>
           <li className="nav-item"><a href="#">Basket</a></li>
           {!loggedIn && (
-            <li className="nav-item">
-              <Link to="/login">Log In</Link>
-            </li>
+            
+              <li className="nav-item">
+                <Link to="/login" >Log In</Link>
+              </li>   
           )}
         </ul>
       </nav>
-
       <footer className={`footer ${isVisible ? 'visible' : ''}`}>
-        <ul className="footer-list">
-          <li className="footer-item"><a href="#">Log In</a></li>
-        </ul>
+        {/* Add footer content here */}
       </footer>
     </div>
   );
 }
 
 export default NavFooter;
+      
+
+
