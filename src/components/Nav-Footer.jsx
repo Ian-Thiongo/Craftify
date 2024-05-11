@@ -32,19 +32,22 @@ function NavFooter() {
           <li className="nav-item"><a href="#">About</a></li>
           <li className="nav-item"><a href="#">Contact Us</a></li>
           <li className="nav-item"><a href="#">Basket</a></li>
-          <li className="nav-item"><a href="#">Log In</a></li>
+          {!loggedIn && (
+            
+              <li className="nav-item">
+                <Link to="/login" >Log In</Link>
+              </li>   
+          )}
         </ul>
       </nav>
       <footer className={`footer ${isVisible ? 'visible' : ''}`}>
-        <div className="footer-content">
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
-        </div>
+        {/* Add footer content here */}
+
       </footer>
     </div>
   );
 }
 
 export default NavFooter;
-
+      
 
