@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import NavFooter from './components/Nav-Footer';
 import Products from "./db.json";
 import "./components/productlisting.css";
-import SearchBar from './SearchBar'
+import SearchBar from "./SearchBar"
+ import ReactDOM from 'react-dom';
+import AppRouter from './AppRouter';
 
 function App() {
   return (
