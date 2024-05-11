@@ -28,6 +28,7 @@ function NavFooter() {
   return (
     <div>
       <nav className="navbar">
+        
         <ul className="nav-list">
           <li className="nav-item"><a href="#">Collections</a></li>
           <li className="nav-item"><a href="#">About</a></li>

@@ -5,7 +5,7 @@ import Products from "./db.json";
 import "./components/productlisting.css";
 import SearchBar from './SearchBar'
 import "./components/BuyButton.css"
-import Logo from './components/Logo'
+
 
 function App() {
   const [query,setQuery] = useState('');
@@ -51,7 +51,7 @@ function App() {
 <>
   <NavFooter />
   <SearchBar onSearch={handleSearch}/> 
-  <Logo/>
+  
   <div className="product-grid"> {/* Container for grid layout */}
   {filteredProducts.length > 0 ? (
       filteredProducts.map((product) => (
