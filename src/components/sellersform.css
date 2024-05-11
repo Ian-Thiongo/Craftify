@@ -17,7 +17,7 @@
   
   .product-form input,
   .product-form textarea {
-    width: 45%; /* Set width for each input field (adjust as needed) */
+    width: 80%; /* Set width for each input field (adjust as needed) */
     padding: 5px;
     border: 1px solid #B08968; /* Add border to input fields */
     border-radius: 3px; /* Add rounded corners to input fields */
@@ -30,7 +30,7 @@
   .product-form button {
     background-color: #9C6644; /* Green color for the button */
     color: white; /* White text color */
-    padding: 10px 20px; /* Padding for the button */
+    padding: 10px 2px; /* Padding for the button */
     border: none; /* Remove default button border */
     border-radius: 5px; /* Add rounded corners to the button */
     cursor:pointer; /* Indicate clickable behavior */
@@ -45,4 +45,4 @@
     h3 {
         color: #9C6644;
         }
-  
+ 

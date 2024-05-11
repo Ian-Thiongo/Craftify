@@ -41,15 +41,14 @@ function NavFooter({ loggedIn, onLoginClick }) {
           )}
         </ul>
       </nav>
-    
-      <footer className="footer">
-          <li className="nav-item"><a href="#">Log In</a></li>
-        </ul>
-      </nav>
       <footer className={`footer ${isVisible ? 'visible' : ''}`}>
-
+        {/* Add footer content here */}
+      </footer>
+    </div>
+  );
+}
 
 export default NavFooter;
-
+      
 
 
