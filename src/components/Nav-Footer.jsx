@@ -1,9 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import './styles.css';
-import { Link } from 'react-router-dom';
 
-function NavFooter({ loggedIn, onLoginClick }) {
+function NavFooter() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -12,7 +10,7 @@ function NavFooter({ loggedIn, onLoginClick }) {
       const scrollPosition = window.scrollY;
       const documentHeight = document.body.offsetHeight;
 
-      // Calculate whether the user has scrolled to the bottom
+      
       if (windowHeight + scrollPosition >= documentHeight) {
         setIsVisible(true);
       } else {
@@ -25,6 +23,7 @@ function NavFooter({ loggedIn, onLoginClick }) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <div>
       <nav className="navbar">
@@ -43,6 +42,7 @@ function NavFooter({ loggedIn, onLoginClick }) {
       </nav>
       <footer className={`footer ${isVisible ? 'visible' : ''}`}>
         {/* Add footer content here */}
+
       </footer>
     </div>
   );
@@ -50,5 +50,4 @@ function NavFooter({ loggedIn, onLoginClick }) {
 
 export default NavFooter;
       
-
 
