@@ -114,7 +114,9 @@ button[type="submit"] {
 
 
 
-
+=======
+  color: #0c0c0c;
+}
 
 .visible {
   bottom: 0; /* Show the footer when visible */
