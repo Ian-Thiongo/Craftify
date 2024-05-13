@@ -1,3 +1,4 @@
+## Project Name
 
 Craftify: An Online Marketplace for Artists and Crafters
 
