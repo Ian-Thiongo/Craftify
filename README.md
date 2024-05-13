@@ -32,7 +32,7 @@ This project has been deployed by Vercel.
 
 
 ## Live Site :
-//////////link tto live site 
+https://craftify-iota.vercel.app/
 
 ## Copyright and License Information
 © 2024 Craftify.
