@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import './styles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 function NavFooter({ loggedIn, onLoginClick }) {
@@ -30,15 +32,26 @@ function NavFooter({ loggedIn, onLoginClick }) {
       <nav className="navbar">
         <ul className="nav-list">
           <li className="nav-item"><a href="#">Collections</a></li>
-          <li className="nav-item"><a href="#">About</a></li>
-          <li className="nav-item"><a href="#">Contact Us</a></li>
-          <li className="nav-item"><a href="#">Basket</a></li>
+          <li className="nav-item">
+            <Link to="/about">About</Link>
+          </li>
+
+          <li className="nav-item">
+            <Link to="/contact">Contact Us</Link>
+          </li>
+
           {!loggedIn && (
             
               <li className="nav-item">
                 <Link to="/login" >Log In</Link>
               </li>   
           )}
+         <li>
+         <a href="Cart">
+         <FontAwesomeIcon icon={faShoppingCart} />
+         </a>
+  
+         </li>
         </ul>
       </nav>
       <footer className={`footer ${isVisible ? 'visible' : ''}`}>

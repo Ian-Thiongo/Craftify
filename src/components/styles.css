@@ -73,7 +73,7 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+ 
   height: 100vh;
   margin: 0;
  
@@ -109,13 +109,6 @@ button[type="submit"] {
   background-color: #7F5539;
   color: #fff;
   cursor: pointer;
-}
-
-
-
-
-=======
-  color: #0c0c0c;
 }
 
 .visible {
