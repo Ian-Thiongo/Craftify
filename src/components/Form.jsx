@@ -12,6 +12,7 @@ function Form({ onLogin }) {
     setSubmitted(true);
     setUsername('');
     setPassword('');
+    
   };
 
   return (

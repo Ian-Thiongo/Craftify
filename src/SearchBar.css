@@ -4,8 +4,8 @@
     align-items: center;
     height: 20vh;
     margin: 0;
-    
     border-radius: 50px;
+    
 }
   
   .search-input {
@@ -24,7 +24,7 @@
   
   .form-input {
     width: 20%;
-    padding: 10px;
+    padding: 0px;
     margin-bottom: 10px;
     font-size: 16px;
     margin: 10px;
