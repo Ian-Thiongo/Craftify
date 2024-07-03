@@ -4,13 +4,15 @@ Craftify: An Online Marketplace for Artists and Crafters
 
 ## Author(s)
 
- Ian Thiong'o (group leader)
+```
+##Contributors
+ Ian Thiong'o 
  Neema Odire
  Kaisy Maina
  Tatiana Mathia
  Joseph Shonko
  Charles Mumo
-
+```
 
 ## Description
 
@@ -20,10 +22,10 @@ Project Setup Instructions
 ## Prerequisites:
 Node.js and npm (or yarn) installed on your system. 
 ## Cloning the Repository:
-git clone https://github.com/lilThiosh/Craftify
+```git clone https://github.com/lilThiosh/Craftify```
 ## Installing Dependencies:
-cd craftify
-npm install 
+```cd craftify```
+```npm install ```
 
 ## Deployment:
 
