@@ -5,7 +5,6 @@ Craftify: An Online Marketplace for Artists and Crafters
 ## Author(s)
 
 ```
-##Contributors
  Ian Thiong'o 
  Neema Odire
  Kaisy Maina
